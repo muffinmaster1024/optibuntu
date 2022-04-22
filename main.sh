@@ -8,6 +8,8 @@ do
     sudo add-apt-repository ppa:$ppa -y
 done
 
+sudo apt install -y apt-transport-https curl wget
+
 ./setup-element.sh -m
 ./setup-signal.sh -m
 ./setup-brave-browser.sh -m
