@@ -1,4 +1,1 @@
-flatpak gnome-software-plugin-flatpak gnome-software signal-desktop brave-browser
-#dconf-editor
-#gnome-tweaks
-#engrampa
+flatpak gnome-software gnome-software-plugin-flatpak signal-desktop brave-browser
