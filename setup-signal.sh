@@ -1,3 +1,4 @@
+#!/bin/bash
 #These instructions come from https://signal.org/en/download/#
 
 # NOTE: These instructions only work for 64 bit Debian-based
