@@ -5,7 +5,7 @@
 #PPAs from ppa.lst
 for ppa in $(cat ppa.lst)
 do
-    sudo add-apt-repository ppa:$ppa
+    sudo add-apt-repository ppa:$ppa -y
 done
 
 ./setup-signal.sh -m
@@ -17,7 +17,7 @@ sudo apt update
 #APT from apt.lst
 for apt in $(cat apt.lst)
 do
-    sudo install -y $apt
+    sudo install $apt -y
 done
 
 #./sub.sh
