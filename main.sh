@@ -8,6 +8,7 @@ do
     sudo add-apt-repository ppa:$ppa -y
 done
 
+./setup-element.sh -m
 ./setup-signal.sh -m
 ./setup-brave-browser.sh -m
 
