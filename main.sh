@@ -17,7 +17,7 @@ sudo apt update
 #APT from apt.lst
 for apt in $(cat apt.lst)
 do
-    sudo install $apt -y
+    sudo apt install $apt -y
 done
 
 #./sub.sh
@@ -27,7 +27,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 #FLATPAKs from flatpak .lst
 for flat in $(cat flat.lst)
 do
-    flatpk install $flat
+    flatpak install $flat
 done
 
 ./firefox-from-source.sh
