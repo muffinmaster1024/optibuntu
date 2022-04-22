@@ -1,7 +1,9 @@
 #!/bin/bash
 #These instructions come from https://brave.com/linux/#release-channel-installation
 
-sudo apt install apt-transport-https curl
+if ! [[ "$1" == "-m" ]]; then
+    sudo apt install apt-transport-https curl -y
+fi
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
