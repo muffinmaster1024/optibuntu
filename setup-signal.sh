@@ -13,4 +13,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
   sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 
 # 3. Update your package database and install signal
-sudo apt update && sudo apt install signal-desktop -y
+
+if ! [[ "$1" == "-m" ]]; then
+    sudo apt update && sudo apt install signal-desktop -y
+fi
