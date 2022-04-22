@@ -20,6 +20,11 @@ do
     sudo apt install $apt -y
 done
 
+for apt in $(cat apt-rmv.lst)
+do
+    sudo apt remove $apt -y
+done
+
 #./sub.sh
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
