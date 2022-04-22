@@ -12,4 +12,3 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 if ! [[ "$1" == "-m" ]]; then
     sudo apt update && sudo apt install brave-browser -y
 fi
-
