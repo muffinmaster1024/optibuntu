@@ -14,9 +14,9 @@ sudo apt install dconf-editor gnome-tweaks #engrampa
 sudo apt install flatpak gnome-software-plugin-flatpak gnome-software
 #sudo apt remove file-roller
 
-./firefox.sh
-./signal.sh
-./brave.sh
+./firefox-from-source.sh
+./setup-signal.sh
+./setup-brave-browser.sh
 #./sub.sh
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
