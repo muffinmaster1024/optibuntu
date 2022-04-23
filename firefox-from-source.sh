@@ -5,7 +5,7 @@
 wget "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" -O ~/Downloads/latest-firefox.tar.bz2
 
 #Unpacking
-tar xjf lastest-firefox.tar.bz2
+tar xjf ~/Downloads/lastest-firefox.tar.bz2
 
 #Move to /opt
 sudo mv firefox /opt
