@@ -32,7 +32,7 @@ sudo apt autoremove
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 #FLATPAKs from flatpak .lst
-for flat in $(cat flat.lst)
+for flat in $(cat flatpak.lst)
 do
     flatpak install $flat
 done
