@@ -1,9 +1,9 @@
 #!/bin/bash
 #This script basically is taken from https://support.mozilla.org/en-US/kb/install-firefox-linux
-read -p "choose Language: [1] en OR [2] de" LANG
-if [[ "LANG" == "1" ]]; then
+read -p "choose Language: [1] en OR [2] de: " LANG
+if [[ $LANG == "1" ]]; then
     LANG="en-US"
-elif [[ LANG == "2" ]]; then
+elif [[ $LANG == "2" ]]; then
     LANG="de"
 else
     echo "Please choose 1 or 2"
