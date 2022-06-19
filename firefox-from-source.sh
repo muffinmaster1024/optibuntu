@@ -1,11 +1,19 @@
 #!/bin/bash
 #This script basically is taken from https://support.mozilla.org/en-US/kb/install-firefox-linux
+read -p "choose Language: [1] en OR [2] de" LANG
+if [[ "LANG" == "1" ]]; then
+    LANG="en-US"
+elif [[ LANG == "2" ]]; then
+    LANG="de"
+else
+    echo "Please choose 1 or 2"
+fi 
 
 #Download latest release
-wget "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US" -O ~/Downloads/latest-firefox.tar.bz2
+wget "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=$LANG" -O ~/Downloads/latest-firefox.tar.bz2
 
 #Unpacking
-tar xjf ~/Downloads/lastest-firefox.tar.bz2
+tar -xjf ~/Downloads/lastest-firefox.tar.bz2
 
 #Move to /opt
 sudo mv firefox /opt
