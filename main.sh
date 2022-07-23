@@ -38,6 +38,10 @@ do
     flatpak install $flat
 done
 
+echo "alias killpk='sudo kill -9 `ps aux|grep packagekitd|head -1|cut -d\  -f9`'" >> $HOME/.bash_aliases
+echo "alias apt='sudo nala'" >> $HOME/.bash_aliases
+echo "alias sysupdate='killpk && apt update && apt upgrade -y && apt autoremove && flatpak update -y && flatpak remove --unused'" >> $HOME/.bash_aliases
+
 ./firefox-from-source.sh
 
 ./sub.sh
