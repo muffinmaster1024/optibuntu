@@ -15,6 +15,11 @@ sudo apt install -y apt-transport-https curl wget
 ./setup-brave-browser.sh -m
 ./setup-nala.sh -m
 
+touch $HOME/.bash_aliases
+echo "alias killpk='sudo kill -9 `ps aux|grep packagekitd|head -1|cut -d\  -f9`'" >> $HOME/.bash_aliases
+echo "alias sysupdate='killpk && sudo nala update && sudo nala upgrade -y && sudo nala autoremove && flatpak update -y && flatpak remove --unused'" >> $HOME/.bash_aliases
+source $HOME/.bash_aliases
+
 sudo apt update
 #sudo apt upgrade -y
 
@@ -37,10 +42,6 @@ for flat in $(cat flatpak.lst)
 do
     flatpak install $flat
 done
-
-echo "alias killpk='sudo kill -9 `ps aux|grep packagekitd|head -1|cut -d\  -f9`'" >> $HOME/.bash_aliases
-echo "alias apt='sudo nala'" >> $HOME/.bash_aliases
-echo "alias sysupdate='killpk && apt update && apt upgrade -y && apt autoremove && flatpak update -y && flatpak remove --unused'" >> $HOME/.bash_aliases
 
 ./firefox-from-source.sh
 
